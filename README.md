@@ -5,8 +5,8 @@
 
 Part 1 :
 
-<h4>
-* memset
+
+<h4>* memset
 * bzero
 * memcpy
 * memccpy
