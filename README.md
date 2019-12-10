@@ -1,5 +1,5 @@
 # Libft
-<h1> Projet 42 : Libft <h1>
+<h1> Projet 42 : Libft 
 
 Fonctions a recoder de la LIBC
 
