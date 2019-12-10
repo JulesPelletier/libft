@@ -16,9 +16,6 @@ usuelles que vous pourrez utiliser dans tous vos prochains projets._
 - III Partie bonus
 
 
-
-
-
 ### II.2 Part 1 - Fonctions de la libc
 
 
@@ -55,9 +52,8 @@ tion externe :
 ### II.3 Part 2 - Fonctions supplémentaires
 
 
-Function name ft_substr
-Prototype char *ft_substr(char const *s, unsigned int start,
-size_t len);
+Function name | ft_substr
+Prototype     | char *ft_substr(char const *s, unsigned int start, size_t len);
 Fichiers de rendu -
 Paramètres #1. La chaine de laquelle extraire la nouvelle
 chaine
