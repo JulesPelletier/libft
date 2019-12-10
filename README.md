@@ -16,7 +16,7 @@ usuelles que vous pourrez utiliser dans tous vos prochains projets._
 - III Partie bonus
 
 
-### II.2 Part 1 - Fonctions de la libc
+### Part 1 - Fonctions de la libc
 
 
 Vous devez recoder les fonctions suivantes. Ces fonctions ne nécessitent aucune fonc-
@@ -47,16 +47,15 @@ tion externe :
 - calloc
 - strdup
 
-
-
-### II.3 Part 2 - Fonctions supplémentaires
+### Part 2 - Fonctions supplémentaires
 
 
 Function name | ft_substr
+-------------------------
 Prototype     | char *ft_substr(char const *s, unsigned int start, size_t len);
-Fichiers de rendu -
-Paramètres #1. La chaine de laquelle extraire la nouvelle
-chaine
+-------------------------------------------------------------------------------
+Paramètres    | #1. La chaine de laquelle extraire la nouvelle chaine
+-------------------------------------------------------------------------------
 #2. L’index de début de la nouvelle chaine dans la
 chaine ’s’.
 #3. La taille maximale de la nouvelle chaine.
