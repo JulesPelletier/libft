@@ -16,101 +16,12 @@ usuelles que vous pourrez utiliser dans tous vos prochains projets._
 - III Partie bonus
 
 
-# Chapitre I
-
-# Introduction
-
-La programmation enCest une activité très laborieuse dès lors qu’on a pas accès à
-toutes ces petites fonctions usuelles très pratiques. C’est pourquoi nous vous proposons
-à travers ce projet de prendre le temps de récrire ces fonctions, de les comprendre et
-de vous les approprier. Vous pourrez alors réutiliser votre bibliothèque pour travailler
-efficacement sur vos projets enCsuivants.
-
-Ce projet est également pour vous l’occasion d’étendre la liste des fonctions demandées
-avec les vôtres et ainsi de rendre votre bibliothèque encore plus utile. N’hésitez pas à
-compléter votrelibfttout au long de votre scolarité une fois que ce projet ne sera plus
-qu’un souvenir pour vous.
 
 
-# Chapitre II
-
-# Règles communes
-
-- Votre projet doit être codé à la Norme. Si vous avez des fichiers ou fonctions bonus,
-    celles-ci seront inclues dans la vérification de la norme et vous aurez 0 au projet
-    en cas de faute de norme.
-- Vos fonctions de doivent pas s’arrêter de manière inattendue (segmentation fault,
-    bus error, double free, etc) mis à part dans le cas d’un comportement indéfini. Si
-    cela arrive, votre projet sera considéré non fonctionnel et vous aurez 0 au projet.
-- Toute mémoire allouée sur la heap doit être libéré lorsque c’est nécessaire. Aucun
-    leak ne sera toléré.
-- Si le projet le demande, vous devez rendre un Makefile qui compilera vos sources
-    pour créer la sortie demandée, en utilisant les flags-Wall,-Wextraet-Werror.
-    Votre Makefile ne doit pas relink.
-- Si le projet demande un Makefile, votre Makefile doit au minimum contenir les
-    règles$(NAME),all,clean,fcleanetre.
-- Pour rendre des bonus, vous devez inclure une règlebonusà votre Makefile qui
-    ajoutera les divers headers, librairies ou fonctions qui ne sont pas autorisées dans la
-    partie principale du projet. Les bonus doivent être dans une fichier_bonus.{c/h}.
-    L’évaluation de la partie obligatoire et de la partie bonus sont faites séparément.
-- Si le projet autorise votrelibft, vous devez copier ses sources et son Makefile
-    associé dans un dossier libft contenu à la racine. Le Makefile de votre projet doit
-    compiler la librairie à l’aide de son Makefile, puis compiler le projet.
-- Nous vous recommandons de créer des programmes de test pour votre projet, bien
-    que ce travail **ne sera pas rendu ni noté**. Cela vous donnera une chance de
-    tester facilement votre travail ainsi que celui de vos pairs.
-- Vous devez rendre votre travail sur le git qui vous est assigné. Seul le travail déposé
-    sur git sera évalué. Si Deepthought doit corriger votre travail, cela sera fait à la fin
-    des peer-evaluations. Si une erreur se produit pendant l’évaluation Deepthought,
-    celle-ci s’arrête.
-
-
-Libft Ta propre bibliothèque à toi tout seul
-
-```
-Nom du pro-
-gramme
-```
-```
-libft.a
-```
-```
-Fichiers de rendu *.c, libft.h, Makefile
-Makefile Oui
-Fonctions ex-
-ternes autorisées
-```
-```
-Voir en dessous
-```
-```
-Libft autorisée Non-applicable
-Description Écrivez votre propre librairie, contenant un
-extrait des fonctions nécessaires à la suite de
-votre cursus.
-```
-### II.1 Considérations techniques
-
-- Interdiction d’utiliser des variables globales.
-- Si vous avez besoin de fonctions auxiliaires pour l’écriture d’une fonction complexe,
-    vous devez définir ces fonctions auxiliaires enstaticdans le respect de la Norme.
-
-
-Libft Ta propre bibliothèque à toi tout seul
 
 ### II.2 Part 1 - Fonctions de la libc
 
-Dans cette première partie, vous devez recoder un ensemble de fonctions de lalibc
-telles que décrites dans leurmanrespectif sur votre système. Vos fonctions devront avoir
-exactement le même prototype et le même comportement que les originales. Leur nom
-devra être préfixé par “ft_”. Par exemplestrlendevientft_strlen.
 
-```
-Certains prototypes des fonctions que vous devez recoder utilisent
-le qualifieur de type "restrict". Ce mot clef fait parti du standard
-c99, vous devez donc ne pas le mettre dans vos prototypes et ne pas
-compiler avec le flag -std=c99.
-```
 Vous devez recoder les fonctions suivantes. Ces fonctions ne nécessitent aucune fonc-
 tion externe :
 
@@ -136,23 +47,14 @@ tion externe :
 - strlcat
 - strnstr
 - atoi
-
-```
-Vous devez également recoder ces fonctions, en faisant appel à la fonction “malloc” :
-```
 - calloc
 - strdup
 
 
-Libft Ta propre bibliothèque à toi tout seul
 
 ### II.3 Part 2 - Fonctions supplémentaires
 
-Dans cette seconde partie, vous devrez coder un certain nombre de fonctions absentes
-de lalibcou présentes dans une forme différente. Certaines de ces fonctions peuvent
-avoir de l’intéret pour faciliter l’écriture des fonctions de la première partie.
 
-```
 Function name ft_substr
 Prototype char *ft_substr(char const *s, unsigned int start,
 size_t len);
@@ -350,9 +252,8 @@ write
 ```
 ```
 Description Écrit l’integer ’n’ sur le file descriptor donné.
-```
 
-# Chapitre III
+
 
 # Partie bonus
 
@@ -457,11 +358,7 @@ None
 ```
 ```
 Description Renvoie le dernier élément de la liste.
-```
 
-Libft Ta propre bibliothèque à toi tout seul
-
-```
 Function name ft_lstadd_back
 Prototype void ft_lstadd_back(t_list **alst, t_list *new);
 Fichiers de rendu -
