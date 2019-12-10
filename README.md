@@ -3,6 +3,7 @@
 
 <h3> Fonctions a recoder de la LIBC
 
+
 **Part 1 :**
 
 * memset
@@ -34,9 +35,9 @@
 
 Function Name | ft_substr
 -------------------------
-Prototype | char *ft_substr(char const *s, unsigned int start, size_t len);
+Prototype     | char *ft_substr(char const *s, unsigned int start, size_t len);
 ---------------------------------------------------------------------------
-Parametres | #1. La chaine de laquelle extraire la nouvelle chaine
-           | #2. L’index de début de la nouvelle chaine dans la chaine ’s’.
-           | #3. La taille maximale de la nouvelle chaine.
+Parametres    | #1. La chaine de laquelle extraire la nouvelle chaine
+              | #2. L’index de début de la nouvelle chaine dans la chaine ’s’.
+              | #3. La taille maximale de la nouvelle chaine.
 ---------------------------------------------------------------------------
