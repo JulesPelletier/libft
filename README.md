@@ -1,7 +1,7 @@
 # Libft
 <h1> Projet 42 : Libft 
 
-Fonctions a recoder de la LIBC
+<h3> Fonctions a recoder de la LIBC
 
 * memset
 * bzero
