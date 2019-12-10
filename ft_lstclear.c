@@ -1,34 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcat.c                                       :+:      :+:    :+:   */
+/*   ft_lstclear_bonus.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: julpelle <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/12/04 14:02:06 by julpelle          #+#    #+#             */
-/*   Updated: 2019/12/09 17:22:41 by julpelle         ###   ########.fr       */
+/*   Created: 2019/12/04 14:16:30 by julpelle          #+#    #+#             */
+/*   Updated: 2019/12/10 15:06:31 by julpelle         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t		ft_strlcat(char *dest, const char *src, size_t size)
+void	recursive_clear(t_list *ptr, void (*del)(void*))
 {
-	size_t	i;
-	size_t	len;
-	size_t	len_src;
+	if (ptr->next)
+		recursive_clear(ptr->next, del);
+	del(ptr->content);
+	free(ptr);
+}
 
-	len = 0;
-	len_src = ft_strlen((char *)src);
-	while (dest[len] && len < size)
-		len = len + 1;
-	i = len;
-	while (src[len - i] && len + 1 < size)
-	{
-		dest[len] = src[len - i];
-		len = len + 1;
-	}
-	if (i < size)
-		dest[len] = '\0';
-	return (len_src + i);
+void	ft_lstclear(t_list **lst, void (*del)(void*))
+{
+	if (!lst || !del || !*lst)
+		return ;
+	recursive_clear(*lst, del);
+	*lst = 0;
 }

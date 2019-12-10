@@ -6,23 +6,29 @@
 /*   By: julpelle <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/12/04 14:18:03 by julpelle          #+#    #+#             */
-/*   Updated: 2019/12/04 16:46:41 by julpelle         ###   ########.fr       */
+/*   Updated: 2019/12/10 15:09:24 by julpelle         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-t_list	*ft_lstmap(t_list *lst, t_list *(*f)(void *))
+t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
+	t_list	*map;
 	t_list	*tmp;
 
-	if (!(tmp = (t_list *)malloc(sizeof(t_list))))
+	if (lst == NULL || f == NULL)
 		return (NULL);
-	tmp = f(lst);
-	while (lst)
+	map = NULL;
+	while (lst != NULL)
 	{
-		ft_lstadd_front(&tmp, f(lst));
+		if ((tmp = ft_lstnew((*f)(lst->content))) == NULL)
+		{
+			ft_lstclear(&map, del);
+			return (NULL);
+		}
+		ft_lstadd_back(&map, tmp);
 		lst = lst->next;
 	}
-	return (tmp);
+	return (map);
 }
