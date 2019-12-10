@@ -3,6 +3,9 @@
 
 <h3> Fonctions a recoder de la LIBC
 
+Part 1 :
+
+<h4>
 * memset
 * bzero
 * memcpy
@@ -25,3 +28,6 @@
 * strlcat
 * strnstr
 * atoi
+* calloc
+* strdup
+
